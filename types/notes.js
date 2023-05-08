@@ -12,7 +12,9 @@ v = Symbol();
 typeof v // "symbol"
 
 v=null;
-typeof v // "object" interesting
+typeof v // "object" interesting: Historically, to unset a value such as number, undefined is used. And, to unset an object, null is used.
+// That might be the reason why the type of num returns as object. It is kind of a bug. So, when we are checking whether the type of something
+// is object, it is not null.
 
 v= function(){};
 typeof v //"function"
